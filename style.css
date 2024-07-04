@@ -8,8 +8,57 @@ body {
 
 .main-calculator{
     background-color: white;
-    height: 600px;
-    width: 400px;
+    height: 500px;
+    width: 360px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
 
+}
+
+.calc-buttons {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.screen {
+    background-color: rgb(41, 41, 41);
+    margin: 10px;
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 10px;
+    
+}
+
+.screen label {
+    color: white;
+    font-size: 20px;
+
+}
+
+.calc-buttons button{
+    font-size: 25px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    outline: none;
+    border: 1px solid;
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+.calc-buttons .extra-styling {
+    background-color: rgb(199, 130, 2);
+}
+
+.calc-buttons .extra-styling-delete {
+    background-color: rgb(122, 1, 1);
 }
