@@ -1,6 +1,12 @@
+const screen = document.getElementById("value-toShow");
+
 const buttons = document.querySelectorAll("button").forEach((e) => {
     e.addEventListener("click", function() {
-        console.log(e.value)
+        screen.innerText += e.value;
     })
 })
+
+
+
+
 console.log(buttons)
