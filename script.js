@@ -13,12 +13,40 @@ const buttons = document.querySelectorAll("button").forEach((e) => {
         if(e.value === "C"){
             screen.innerText = "";
         }
- 
+        else if(e.value === "="){
+            screen.innerText = calculate(value.mode);
+        }
         else{
             screen.innerText += e.value;
+            if(e.value === "+" || e.value === "-" || e.value === "/" || e.value === "*"){
+                value.mode = e.value;
+            }
+            else if(value.mode === ""){
+                value.firstValue += e.value;
+            }
+            else if (value.mode !== ""){
+                value.secondValue += e.value;
+            }
         }
     })
 })
+
+function calculate(mode){
+    switch(mode){
+        case "+": {
+            return add(value.firstValue, value.secondValue)
+        }
+        case "-": {
+            return sub(value.firstValue, value.secondValue)
+        }
+        case "/": {
+            return div(value.firstValue, value.secondValue)
+        }
+        case "*": {
+            return mult(value.firstValue, value.secondValue)
+        }
+    }
+}
 
 
 function add(val1, val2){
