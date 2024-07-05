@@ -14,7 +14,11 @@ const buttons = document.querySelectorAll("button").forEach((e) => {
             screen.innerText = "";
         }
         else if(e.value === "="){
-            screen.innerText = calculate(value.mode);
+            let result = calculate(value.mode);
+            screen.innerText = result;
+            value.firstValue = result;
+            value.mode = ""
+            value.secondValue = ""; 
         }
         else{
             screen.innerText += e.value;
@@ -50,7 +54,7 @@ function calculate(mode){
 
 
 function add(val1, val2){
-    return val1 + val2;
+    return +val1 + +val2;
 }
 function sub(val1, val2){
     return val1 - val2;
