@@ -56,7 +56,7 @@ function sub(val1, val2){
     return val1 - val2;
 }
 function mult(val1, val2){
-    return val1 - val2;
+    return val1 * val2;
 }
 function div(val1, val2){
     if(val2 === 0){
